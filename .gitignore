@@ -1,0 +1,12 @@
+# Large files ignored (data files, genomes, BAMs/SAMs, large PDFs)
+*.gz
+*.bam
+*.sam
+*.fai
+*.mmi
+*.fa
+*.pdf
+
+# Python cache / artifacts
+__pycache__/
+*.pyc
