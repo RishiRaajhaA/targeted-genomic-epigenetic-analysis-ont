@@ -69,34 +69,9 @@ The pipeline is benchmarked on the reference human cell line **NA12878 / GM12878
 
 ## 🏗️ Computational Pipeline Architecture
 
-```mermaid
-graph TD
-    A["Raw Native Nanopore Reads<br/><code>SRR12423814_1.fastq.gz</code>"] --> B["Step 1: Quality Control<br/><code>qc.py</code> (Length, Phred, N50)"]
-    B --> C["Step 2: Reference Alignment<br/><code>Minimap2</code> (preset: <code>map-ont</code>) & <code>GRCh38.p13.fa</code>"]
-    C --> D["Step 3: SAM/BAM Processing<br/><code>SAMtools</code> (View, Sort, Index)"]
-    D --> E["Step 4: Target Coverage Analysis<br/><code>plot_coverage.py</code> & <code>targets.bed</code>"]
-    
-    E --> F["Step 5: Variant Calling & Dual-Strand Filter<br/><code>scripts/variant_caller.py</code>"]
-    F --> G["Step 6: Haplotype Phasing & Haplotagging<br/><code>scripts/phasing.py</code>"]
-    E --> H["Step 7: Native CpG Methylation<br/><code>scripts/methylation.py</code>"]
-    H --> I["Step 8: Orthogonal Validation<br/>Benchmark against GM12878 WGBS"]
-    E --> J["Step 9: Forensic STR & SV Calling<br/><code>scripts/str_sv_analyzer.py</code>"]
-    
-    G --> K["Step 10: Integrated Multi-Omic Dashboard<br/><code>scripts/multiomic_dashboard.py</code>"]
-    I --> K
-    J --> K
-
-    style B fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style C fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style D fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style E fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style F fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style G fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style H fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style I fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style J fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    style K fill:#d4edda,stroke:#28a745,stroke-width:2px;
-```
+<p align="center">
+  <img src="results/multiomics/computational_pipeline_architecture.png" width="95%" alt="Computational Pipeline Architecture" />
+</p>
 
 ---
 
