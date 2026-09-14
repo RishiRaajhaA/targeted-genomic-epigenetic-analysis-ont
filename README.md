@@ -125,7 +125,7 @@ graph TD
 ### 2. Alignment & Target Coverage Analysis (`plot_coverage.py`)
 
 | Target ID | Genomic Region | Size (bp) | Read Count | Covered Bases | Coverage Breadth (%) | Mean Depth (×) | Mean Base Q | Mean Map Q |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **T1** | `chr15:27983281-27993166` | 9,886 | 1,694 | 9,886 | **100.00%** | **72.98×** | 20.3 | 14.6 |
 | **T2** | `chr15:28112702-28130250` | 17,549 | 679 | 17,532 | **99.90%** | **20.21×** | 19.5 | 12.2 |
 | **T3** | `chr14:92303403-92323757` | 20,355 | 908 | 20,329 | **99.87%** | **16.88×** | 20.3 | 13.4 |
@@ -204,7 +204,7 @@ Using single-molecule spanning reads across heterozygous SNVs, contiguous phase 
 
 Direct 5-methylcytosine ($5\text{mC}$) frequency was evaluated across 1,702 covered CpG dinucleotides and benchmarked against the gold-standard GM12878 Whole-Genome Bisulfite Sequencing (WGBS) reference:
 
-| Target ID | Locus | CpG Sites Evaluated | Mean Depth (×) | Mean $5\text{mC}$ Frequency | ASM Sites ($|\Delta MF| \ge 0.25$) | WGBS Correlation ($r$) |
+| Target ID | Locus | CpG Sites Evaluated | Mean Depth (×) | Mean 5mC Frequency | ASM Sites (Delta MF ≥ 0.25) | WGBS Correlation (r) |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
 | **T1** | *OCA2* | 166 | 81.8× | 0.670 | 8 | 0.829 |
 | **T2** | *HERC2/OCA2* | 286 | 18.6× | 0.584 | 3 | 0.766 |
@@ -271,7 +271,6 @@ Direct 5-methylcytosine ($5\text{mC}$) frequency was evaluated across 1,702 cove
 | **Bioinformatics Engine**| `pysam` | 0.24.0+ | Direct C-level BAM/FASTA parsing & pileup traversal |
 | **Alignment & Indexing**| `minimap2` / `samtools` | 2.27 / 1.22 | Fast long-read alignment against GRCh38.p13 |
 | **Visualization** | Matplotlib / Seaborn | 3.10+ / 0.13+ | Publication-grade 300 DPI multi-panel figures |
-| **Slide Deck** | LaTeX / Beamer | Modern Theme | Academic presentation deck (`presentation.tex`) |
 
 ---
 
@@ -318,7 +317,7 @@ python3 scripts/multiomic_dashboard.py
 - [x] **Milestone 5**: Read-backed long-range haplotype phasing and BAM haplotagging.
 - [x] **Milestone 6**: Native CpG 5mC methylation frequency calling and statistical correlation against GM12878 WGBS data.
 - [x] **Milestone 7**: Forensic STR profiling (`TPOX`/`PentaD`) and structural variant detection ($\ge 50\text{ bp}$).
-- [x] **Milestone 8**: Integrated multi-omic dashboard, 300 DPI composite figures, and final Beamer presentation deck.
+- [x] **Milestone 8**: Integrated multi-omic dashboard, 300 DPI composite figures, and complete documentation.
 
 ---
 
