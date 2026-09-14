@@ -1,0 +1,11 @@
+Target_ID	Total_SVs_Called	High_Conf_PASS_SVs	Insertions	Deletions	Mean_SV_Length_bp
+T1	0	0	0	0	0.0
+T2	2	2	1	1	96.0
+T3	0	0	0	0	0.0
+T4	1	0	1	0	311.0
+T5	0	0	0	0	0.0
+T6	1	1	0	1	52.0
+T7	4	2	4	0	101.0
+T8	13	6	7	6	79.2
+T9	0	0	0	0	0.0
+T10	0	0	0	0	0.0

@@ -1,12 +1,38 @@
-# Large files ignored (data files, genomes, BAMs/SAMs, large PDFs)
+# ==============================================================================
+# Git Ignore Configuration for Targeted Nanopore Analysis (nCATS)
+# ==============================================================================
+
+# Large Genomic Data & Sequencing Archives (>50-100 MB)
+*.fna.gz
+*.fastq.gz
 *.gz
 *.bam
 *.sam
 *.fai
 *.mmi
 *.fa
+
+# PDF Documents & Binaries
 *.pdf
 
-# Python cache / artifacts
+# LaTeX Source & Auxiliary Build Artifacts
+*.tex
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Python Cache & Virtual Environments
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.venv/
+env/
