@@ -23,6 +23,8 @@
 *.out
 *.snm
 *.toc
+*.lof
+*.lot
 *.vrb
 *.synctex.gz
 *.fls
